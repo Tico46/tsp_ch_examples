@@ -1,0 +1,16 @@
+1. Write a regular expression that matches the word "Dutch" in The Zen of Python poem
+
+Answer: $ grep Dutch zen.txt
+
+2. Come up with a regular expression that matches all the digits in the string: Arizona, 479, 501, 870. California, 209, 213, 650.
+
+Solution: first I created an environmental variable (x) with the string. Then -->
+	echo $x | grep [[:digit:]]
+
+3. Create a regular expression that matches any word that starts with any character and is followed by 2 o's. (Ex. Too look book bread face soon goon island)
+
+Solution: created a regular expression for "Too look book bread face soon goon island" as 'y'. Then issued command: echo $y | grep -o .oo 
+				which matched a word starting with any char followed by 				"oo"
+
+3a. Then use Python's "re module" to match "boo" and "loo" in a sentence "The ghost that says boo haunts the loo". (See Ch17_3a for solution)
+
